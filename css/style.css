@@ -6,7 +6,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-orange: hsl(26, 100%, 55%);
+    --color-pale-orange: hsl(25, 100%, 94%);
+}
+
 html {
     overflow-x: hidden;
     font-size: 62.5%; /*10px*/
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.cont {
+    max-width: 117rem;
+    margin: 0 auto;
 }
