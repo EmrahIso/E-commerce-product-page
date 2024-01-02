@@ -1,0 +1,7 @@
+.selected {
+    border: 2px solid var(--color-orange) !important;
+}
+
+.selected > * {
+    opacity: 0.3;
+}
