@@ -5,3 +5,24 @@
 .selected > * {
     opacity: 0.3;
 }
+
+.tertiary-heading {
+    text-transform: uppercase;
+    color: var(--color-orange);
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.main-heading {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+    color: var(--color-very-dark-blue);
+}
+
+.flex-cont {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
