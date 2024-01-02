@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/utilities.css">
     <title>E-commerce</title>
 </head>
 <body>
@@ -38,7 +40,53 @@
     </header>
     <main class="main">
         <section class="hero">
-          <div class="cont hero__box"></div>
+          <div class="cont hero__box">
+            <div class="product__preview">
+                <div class="product__preview-big-cont">
+                    <img src="./images/image-product-1.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-2.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-3.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-4.jpg" alt="Product photo" class="product__preview-big-img">
+                </div>
+                <div class="product__preview-small-cont">
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--1 selected">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--2 ">
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--3 ">
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--4 ">
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="product__info">
+                <h3 class="tertiary-heading">Sneaker company</h3>
+                <h1 class="main-heading">Fall Limited Edition Sneakers</h1>
+                <p class="product__info-desc">These low-profile sneakers are just perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <span class="product__info-special-price">$125.00</span>
+                <span class="product__info-discount">50%</span>
+                <span class="product__info-no-special-price">$250.00</span>
+                <div class="product-cart-cont">
+                    <div class="product__info-quantity">
+                        <div class="product__info-quantity-minus"> 
+                            <img src="./images/icon-minus.svg" alt="minus icon" class="product__minus-icon">
+                        </div>
+                        <div class="product__info-quantity-number">0</div>
+                        <div class="product__info-quantity-plus">
+                            <img src="./images/icon-plus.svg" alt="plus icon" class="product__plus-icon">
+                        </div>
+                    </div>
+                    <button class="product__info-cart-add-button">
+                        <img src="./images/icon-cart.svg" alt="cart icon" class="product__cart-icon">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+          </div>
         </section>
     </main>
     <script src="./script.js" defer></script>
