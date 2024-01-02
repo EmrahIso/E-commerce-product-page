@@ -10,8 +10,10 @@
     --color-orange: hsl(26, 100%, 55%);
     --color-pale-orange: hsl(25, 100%, 94%);
     --color-dark-grayish-blue: hsl(219, 9%, 45%);
+    --color-very-dark-blue: hsl(220, 13%, 13%);
     --color-grayish-blue: hsl(220, 14%, 75%);
     --color-light-grayish-blue: hsl(223, 64%, 98%);
+    --color-grey: #555;
     --color-light-grey: #ededed;
     --color-white: hsl(0, 0%, 100%);
 
