@@ -36,3 +36,36 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.product__info-desc {
+    font-size: var(--default-font-size);
+    color: var(--color-dark-grayish-blue);
+    margin-bottom: 2rem;
+}
+
+.product__info-discount,
+.product__info-special-price {
+    margin-bottom: 1rem;
+}
+
+.product__info-special-price {
+    color: var(--color-very-dark-blue);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.product__info-discount {
+    color: var(--color-orange);
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--color-pale-orange);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+.product__info-no-special-price {
+    font-weight: 700;
+    font-size: var(--default-font-size);
+    color: var(--color-grayish-blue);
+    text-decoration: line-through;
+} 
