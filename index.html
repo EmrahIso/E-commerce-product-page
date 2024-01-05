@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <title>E-commerce</title>
 </head>
 <body>
@@ -74,13 +75,9 @@
                 <span class="product__info-no-special-price">$250.00</span>
                 <div class="flex-cont">
                     <div class="product__info-quantity">
-                        <div class="product__info-quantity-minus"> 
-                            <img src="./images/icon-minus.svg" alt="minus icon" class="product__minus-icon">
-                        </div>
-                        <div class="product__info-quantity-number">0</div>
-                        <div class="product__info-quantity-plus">
-                            <img src="./images/icon-plus.svg" alt="plus icon" class="product__plus-icon">
-                        </div>
+                        <img src="./images/icon-minus.svg" alt="minus icon" class="product__minus-icon">
+                        <div class="product__info-quantity-number">0</div> 
+                        <img src="./images/icon-plus.svg" alt="plus icon" class="product__plus-icon">
                     </div>
                     <button class="product__info-cart-add-button">
                         <img src="./images/icon-cart.svg" alt="cart icon" class="product__cart-icon">
@@ -88,6 +85,31 @@
                     </button>
                 </div>
             </div>
+          </div>
+          <div class="popup">
+            <div class="popup-content">
+                <div class="product__preview-big-cont">
+                    <img src="./images/image-product-1.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-2.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-3.jpg" alt="Product photo" class="product__preview-big-img">
+                    <img src="./images/image-product-4.jpg" alt="Product photo" class="product__preview-big-img">
+                </div>
+                <div class="product__preview-small-cont">
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--1 selected">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--2 ">
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--3 ">
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                    <div  class="product__preview-img-small-box product__preview-small-img-box--4 ">
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="product photo" class="product__preview-small-img">
+                    </div>
+                </div>
+            </div>
+            
           </div>
         </section>
     </main>
