@@ -9,7 +9,7 @@
     display: grid;
 }
 
-.lightbox .popup-content {
+.lightbox .popup__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,4 +30,37 @@
 
 .lightbox .popup .product__preview-big-cont {
     transform: scale(1.1);
+}
+
+.popup__close-btn {
+    display: none;
+}
+
+.lightbox .popup__close-btn {
+    display: inline-block;
+    height: 2.25rem;
+    width: 2.25rem;
+    outline: none;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: -15%;
+    right: -6%;
+}
+
+.lightbox .popup__close-icon {
+    fill: var(--color-white);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox .popup__close-icon path {
+    transform: scale(1.7);
+}
+
+.lightbox .popup__close-btn:hover .popup__close-icon,
+.lightbox .popup__close-btn:active .popup__close-icon {
+    fill: var(--color-orange);
 }
