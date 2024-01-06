@@ -34,3 +34,16 @@ body {
     max-width: 117rem;
     margin: 0 auto;
 }
+
+.lightbox {
+    overflow-y: hidden;
+}
+
+.lightbox body .popup {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width:  100%;   
+}
