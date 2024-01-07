@@ -9,6 +9,10 @@
     display: grid;
 }
 
+.popup__content {
+    display: none;
+}
+
 .lightbox .popup__content {
     position: absolute;
     top: 50%;
@@ -64,3 +68,39 @@
 .lightbox .popup__close-btn:active .popup__close-icon {
     fill: var(--color-orange);
 }
+
+.lightbox .popup__switch-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 101;
+    top: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--color-white);
+}
+
+.lightbox .popup__switch-btn--left {
+   left: -6%;
+   transform: translateX(-40%);
+}
+
+.lightbox .popup__switch-btn--right {
+    right: -6%;
+    transform: translateX(40%);
+}
+
+.popup__btn-icon {
+    transition: all 0.2s ease-in-out;
+    stroke: var(--color-switch-button);
+} 
+
+ .lightbox .popup__switch-btn:hover .popup__btn-icon,
+ .lightbox .popup__switch-btn:active .popup__btn-icon {
+    stroke: var(--color-orange);
+ }
