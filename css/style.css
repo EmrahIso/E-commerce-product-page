@@ -16,6 +16,7 @@
     --color-grey: #555;
     --color-light-grey: #ededed;
     --color-white: hsl(0, 0%, 100%);
+    --color-switch-button: #1D2026;
 
     --default-font-size: 1.6rem;
 }
