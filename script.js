@@ -49,3 +49,45 @@ closeLightboxBtnEl.addEventListener('click', closeLightboxPopup);
 function closeLightboxPopup() {
   rootEl.classList.remove('lightbox');
 }
+
+//Lightbox image slider
+const bigImgEls = document.querySelectorAll('.popup__preview-big-img');
+const goLeftBtnEl = document.querySelector('.popup__switch-btn--left');
+const goRightBtnEl = document.querySelector('.popup__switch-btn--right');
+let currentImg = 0;
+
+function goRight() {
+  if(currentImg == 3) {
+    return currentImg = 0;
+  } else {
+    return currentImg++;
+  }
+}
+
+function goLeft() {
+  if(currentImg == 0) {
+    return currentImg = 3;
+  } else {
+    return currentImg--;
+  }
+}
+
+function showImg() {
+  for(let i = 0; i < bigImgEls.length; i++) {
+    if(i == currentImg) {
+      bigImgEls[i].style.display = 'block';
+    } else {
+      bigImgEls[i].style.display = 'none';
+    }
+  }
+}
+
+showImg();
+
+goRightBtnEl.addEventListener('click', goRight);
+goRightBtnEl.addEventListener('click', showImg);
+goLeftBtnEl.addEventListener('click', goLeft);
+goLeftBtnEl.addEventListener('click', showImg);
+
+
+
