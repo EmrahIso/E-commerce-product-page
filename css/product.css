@@ -7,6 +7,7 @@
 .product__preview-big-img {
     width: 100%;
     border-radius: 1.5rem;
+    cursor: pointer;
 }
 
 
@@ -19,6 +20,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
 }
+
 
 .product__preview-img-small-box {
     overflow: hidden;
@@ -132,4 +134,8 @@
 .product__cart-icon {
     filter: brightness(3);
     transform: scale(0.8);
+}
+
+.product__preview-big-img:not(:first-child) {
+    display: none;
 }
