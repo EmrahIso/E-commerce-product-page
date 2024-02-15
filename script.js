@@ -25,6 +25,22 @@ function plusOneQuantity() {
 minusBtnEl.addEventListener('click', minusOneQuantity);
 plusBtnEl.addEventListener('click', plusOneQuantity);
 
+const priceOfProductEl = document.querySelector('.product__info-special-price')
+const priceOfProductElValue = priceOfProductEl.textContent
+const priceOfProduct = Number(priceOfProductElValue.split('$')[1])
+const cartPriceInfo = document.querySelector('.header__user-basket-info-mini-box-price')
+console.log(cartPriceInfo)
+
+const addToCardBtnEl = document.querySelector('.product__info-cart-add-button')
+
+function countCheckout() {
+  const actualPrice = priceOfProduct * quantityNumberValue
+  
+  quantityNumberValue = 0
+  quantityNumberEl.textContent = '0' 
+}
+
+addToCardBtnEl.addEventListener('click', countCheckout)
 //Lightbox
 const rootEl = document.querySelector('html');
 const productPreviewBigContEl = document.querySelector('.product__preview-big-cont');
