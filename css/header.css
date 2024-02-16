@@ -27,10 +27,6 @@
     filter: brightness(0.6);
 }
 
-.header__user-photo-box {
-    display: flex;
-    justify-content: flex-end;
-}
 
 .header__user-img {
     width: 50%;
@@ -39,6 +35,9 @@
     outline: 2px solid transparent;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    height: 6.3rem;
+    width: 6.3rem;
+    margin-left: 5rem;
 }
 
 .header__user-img:hover {
@@ -49,19 +48,27 @@
     position: absolute;
     background-color: var(--color-white);
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
-    top: 100%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, 10%);
     border-radius: 9px;
     width: 37rem;
-    height: 25rem;
-    display: flex;
+    height: 30rem;
+    pointer-events: none;
+    opacity: 0;
     flex-direction: column;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.header__user-basket-cont-open {
+    pointer-events: all;
+    opacity: 1;
 }
 
 .header__user-basket-heading {
     font-size: var(--default-font-size);
-    padding: 2rem 2.5rem;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
 }
 
 .header__user-horline {
