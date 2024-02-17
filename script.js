@@ -25,41 +25,21 @@ function plusOneQuantity() {
 minusBtnEl.addEventListener('click', minusOneQuantity);
 plusBtnEl.addEventListener('click', plusOneQuantity);
 
-//Count Checkout
-
-const priceOfProductEl = document.querySelector('.product__info-special-price');
-const priceOfProductElValue = priceOfProductEl.textContent;
-const priceOfProduct = Number(priceOfProductElValue.split('$')[1]);
-const cartPriceCountEl = document.querySelector('.header__user-basket-info-mini-box-price-count');
-const cartPriceActualEl = document.querySelector('.header__user-basket-info-mini-box-price-actual-price');
-
-const addToCardBtnEl = document.querySelector('.product__info-cart-add-button');
-
-function countCheckout() {
-  let actualPrice = priceOfProduct * quantityNumberValue;
-  actualPrice = actualPrice.toFixed(2);
-  cartPriceCountEl.innerHTML = `${quantityNumberValue}`;
-  cartPriceActualEl.innerHTML = `$${actualPrice}`;
-  cartPriceActualEl.style.cssText = 'font-weight: 700; color: var(--color-very-dark-blue);'
-
-  quantityNumberValue = 0;
-  quantityNumberEl.textContent = '0' ;
-}
-
 //Add and remove items from the list
 
-addToCardBtnEl.addEventListener('click', countCheckout);
 let cartBoxEl = document.querySelector('.header__user-basket-cont');
 const itemBoxEl = document.querySelector('.header__user-basket-box');
 const emptyCartHeadingEl = document.querySelector('.header__user-empty-basket-heading')
-
+const addToCartBtnCountEl = document.querySelector('.header__user-cart-button-count')
+const addToCartBtnEl = document.querySelector('.product__info-cart-add-button');
 
 function addItem() {
+  addToCartBtnCountEl.textContent = quantityNumberValue
   itemBoxEl.classList.add('header__user-basket-box-o')
   emptyCartHeadingEl.style.cssText = 'opacity: 0; pointer-events: none;'
 }
 
-addToCardBtnEl.addEventListener('click', addItem);
+addToCartBtnEl.addEventListener('click', addItem);
 
 const removeBtnEl = document.querySelector('.header__user-basket-box-info-item-delete');
 
@@ -84,6 +64,27 @@ function openCart() {
 cartBtnEl.addEventListener('click', openCart);
 
 
+//Count Checkout
+
+const priceOfProductEl = document.querySelector('.product__info-special-price');
+const priceOfProductElValue = priceOfProductEl.textContent;
+const priceOfProduct = Number(priceOfProductElValue.split('$')[1]);
+const cartPriceCountEl = document.querySelector('.header__user-basket-info-mini-box-price-count');
+const cartPriceActualEl = document.querySelector('.header__user-basket-info-mini-box-price-actual-price');
+
+
+function countCheckout() {
+  let actualPrice = priceOfProduct * quantityNumberValue;
+  actualPrice = actualPrice.toFixed(2);
+  cartPriceCountEl.innerHTML = `${quantityNumberValue}`;
+  cartPriceActualEl.innerHTML = `$${actualPrice}`;
+  cartPriceActualEl.style.cssText = 'font-weight: 700; color: var(--color-very-dark-blue);'
+
+  quantityNumberValue = 0;
+  quantityNumberEl.textContent = '0' ;
+}
+
+addToCartBtnEl.addEventListener('click', countCheckout);
 
 //Lightbox
 const rootEl = document.querySelector('html');
