@@ -17,6 +17,17 @@
     border-radius: 50%;
     border: none;
     outline: none;
+    position: relative;
+}
+
+.header__user-cart-button-count {
+    display: inline-block;
+    background-color: var(--color-orange);
+    border-radius: 40%;
+    color: var(--color-white);
+    position: absolute;
+    top: 15%;
+    right: -25%;
 }
 
 .header__user-cart-icon {
