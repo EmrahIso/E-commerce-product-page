@@ -35,6 +35,7 @@ const addToCartBtnEl = document.querySelector('.product__info-cart-add-button');
 
 function addItem() {
   addToCartBtnCountEl.textContent = quantityNumberValue
+  addToCartBtnCountEl.style.cssText = 'padding: 0.15rem 0.5rem;'
   itemBoxEl.classList.add('header__user-basket-box-o')
   emptyCartHeadingEl.style.cssText = 'opacity: 0; pointer-events: none;'
 }
