@@ -46,46 +46,43 @@ function countCheckout() {
   quantityNumberEl.textContent = '0' ;
 }
 
-//Adding items to the list
+//Add and remove items from the list
 
 addToCardBtnEl.addEventListener('click', countCheckout);
-
 let cartBoxEl = document.querySelector('.header__user-basket-cont');
+const itemBoxEl = document.querySelector('.header__user-basket-box');
+const emptyCartHeadingEl = document.querySelector('.header__user-empty-basket-heading')
 
+
+function addItem() {
+  itemBoxEl.classList.add('header__user-basket-box-o')
+  emptyCartHeadingEl.style.cssText = 'opacity: 0; pointer-events: none;'
+}
+
+addToCardBtnEl.addEventListener('click', addItem);
 
 const removeBtnEl = document.querySelector('.header__user-basket-box-info-item-delete');
 
 function removeCartItems() {
-  console.log('removed');
+  itemBoxEl.classList.remove('header__user-basket-box-o')
+  emptyCartHeadingEl.style.cssText = 'opacity: 1; pointer-events: all;'
 }
 
 removeBtnEl.addEventListener('click', removeCartItems);
 
+
 //Open and close Cart
 
-const cartBtnEl = document.querySelector('.header__user-cart-button');
-const cartEl = document.querySelector('.header__user-basket-cont');
-const bodyEl = document.querySelector('body')
 
-function closeCart() {
-  if('header__user-basket-cont-open' in cartEl.classList) {
-    console.log('yes')
-  } 
-}
+const cartEl = document.querySelector('.header__user-basket-cont');
+const cartBtnEl = document.querySelector('.header__user-cart-button');
 
 function openCart() {
-  cartEl.classList.add('header__user-basket-cont-open')
-}
-
-if('header__user-basket-cont-open' in cartEl.classList) {
-  console.log('yes')
-  console.log(cartEl.classList)
-} else {
-  console.log('No')
-  console.log(cartEl.classList)
+  cartEl.classList.toggle('header__user-basket-cont-open')
 }
 
 cartBtnEl.addEventListener('click', openCart);
+
 
 
 //Lightbox
