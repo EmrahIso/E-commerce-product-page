@@ -14,13 +14,13 @@
 }
 
 .lightbox .popup__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    display: flex;
     height: 50rem;
     width: 50rem;
-    display: flex;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     flex-direction: column;
     gap: 6rem;
 }
@@ -42,8 +42,8 @@
 
 .lightbox .popup__close-btn {
     display: inline-block;
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 3rem;
+    width: 3rem;
     outline: none;
     position: absolute;
     background-color: transparent;
@@ -86,13 +86,13 @@
 }
 
 .lightbox .popup__switch-btn--left {
-   left: -6%;
    transform: translateX(-40%);
+   left: 0;
 }
 
 .lightbox .popup__switch-btn--right {
-    right: -6%;
     transform: translateX(40%);
+    right: 0;
 }
 
 .popup__btn-icon {
