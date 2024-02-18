@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/popup.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>E-commerce</title>
 </head>
 <body>
@@ -91,7 +92,7 @@
                     <span class="product__info-discount">50%</span>
                 </div>       
                 <span class="product__info-no-special-price">$250.00</span>
-                <div class="flex-cont">
+                <div class="flex-cont flex-cont-count">
                     <div class="product__info-quantity">
                         <svg width="12" height="4" class="product__minus-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
                         <div class="product__info-quantity-number">0</div> 
@@ -106,16 +107,16 @@
           </div>
           <div class="popup">
             <div class="popup__content">
-                <button class="popup__switch-btn popup__switch-btn--left">
-                    <svg class="popup__btn-icon" height="20px"  width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-                </button>
-                <button class="popup__switch-btn popup__switch-btn--right">
-                    <svg class="popup__btn-icon" height="20px" width="12px"  xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-                </button>
                 <button class="popup__close-btn">
                     <svg class="popup__close-icon" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
                 </button>
                 <div class="product__preview-big-cont">
+                    <button class="popup__switch-btn popup__switch-btn--left">
+                        <svg class="popup__btn-icon" height="20px"  width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                    </button>
+                    <button class="popup__switch-btn popup__switch-btn--right">
+                        <svg class="popup__btn-icon" height="20px" width="12px"  xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                    </button>
                     <img src="./images/image-product-1.jpg" alt="Product photo" class="product__preview-big-img popup__preview-big-img">
                     <img src="./images/image-product-2.jpg" alt="Product photo" class="product__preview-big-img popup__preview-big-img">
                     <img src="./images/image-product-3.jpg" alt="Product photo" class="product__preview-big-img popup__preview-big-img">
@@ -139,6 +140,12 @@
           </div>
         </section>
     </main>
+    <footer class="attribution">
+        <div class="cont">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>
+            Coded by <a href="https://emrahisovic.netlify.app/" target="_blank"> Emrah Isovic</a>
+        </div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
