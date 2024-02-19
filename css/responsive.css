@@ -18,9 +18,8 @@
         gap: 0rem;
     }
 }
-
-/* 750px */
-@media only screen and (max-width: 46.875em) {
+/* 800px */
+@media only screen and (max-width: 50em) {
     .hero__box {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, minmax(15rem, 50rem));
@@ -38,11 +37,115 @@
         height: 100%;
     }
 
-    .product__info {
-        align-items: center;
+    .header {
+        height: 11.1rem;
+    }
+    
+    .header__box {
+        width: 100vw;
+        position: fixed;
+        right: 50%;
+        transform: translateX(50%);
+        background-color: #fff;
+    }
+
+    .attribution > .cont {
+        justify-content: flex-start;
+        padding: 0 4rem;
+    }
+
+    .nav {
+        flex-direction: row-reverse;
+        gap: 3rem;
+    }
+
+    .nav__open-btn {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+    }
+
+    .nav__list {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        position: absolute;
+        z-index: 9998;
+    }
+
+    .header__box {
+        padding: 2.5rem;
+    }
+
+    .nav__open-btn {
+        position: relative;
     } 
 
-    .flex-cont-count {
-        align-items: center;
+    .menu-close-icon,
+    .menu-open-icon {
+        position: absolute;
+        transform: translateY(-50%);
+        z-index: 9999;
+    }
+
+    .menu-close-icon {
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .menu-open-icon {
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .m-c .menu-close-icon {
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .m-c .menu-open-icon {
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav__list {
+        opacity: 1; 
+        pointer-events: all;
+        visibility: visible; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 9998;
+        width: 66vw;
+        height: 100vh;
+        flex-direction: column;
+        padding: 15rem 2.5rem 0 2.5rem;
+    }
+
+    .nav__list-item {
+        padding: 1rem 0;
+    }
+
+    .nav__list-item-link:link,
+    .nav__list-item-link:visited {
+        font-weight: 700;
+        color: var(--color-very-dark-blue);
+        font-size: 2.4rem;
+    }
+}
+
+/* 500px */
+@media only screen and (max-width: 31.25em) {
+    html {
+        font-size: 50%; /*8PX*/
+    }
+
+    .attribution > .cont {
+        font-size: 1.4rem;
     }
 }
