@@ -151,5 +151,12 @@ goRightBtnEl.addEventListener('click', showImg);
 goLeftBtnEl.addEventListener('click', goLeft);
 goLeftBtnEl.addEventListener('click', showImg);
 
+// Mobile Navigation
 
+const menuBtnEl = document.querySelector('.nav__open-btn')
 
+menuBtnEl.addEventListener('click', menuOpen)
+
+function menuOpen() {
+  rootEl.classList.toggle('m-c')
+}
