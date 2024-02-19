@@ -39,3 +39,13 @@
 .nav__list-item-link:active::after {
     width: 100%;
 }
+
+.nav__open-btn {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
