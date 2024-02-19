@@ -42,7 +42,8 @@ body {
     margin: 0 auto;
 }
 
-.lightbox {
+.lightbox,
+.m-c  {
     overflow-y: hidden;
 }
 
@@ -57,4 +58,16 @@ body {
 
 .logo-img {
     cursor: pointer;
+}
+
+.m-c body .menu-dark {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9991;
+    height: 100vh;
+    width:  100vw;
+    right: 0;
+    top: 0;
+    width: 34vw;
 }
