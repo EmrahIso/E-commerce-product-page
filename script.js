@@ -112,7 +112,7 @@ function closeLightboxPopup() {
   rootEl.classList.remove('lightbox');
 }
 
-//Lightbox image slider
+//Lightbox Image Slider
 const bigImgEls = document.querySelectorAll('.popup__preview-big-img');
 const goLeftBtnEl = document.querySelector('.popup__switch-btn--left');
 const goRightBtnEl = document.querySelector('.popup__switch-btn--right');
@@ -137,19 +137,30 @@ function goLeft() {
 function showImg() {
   for(let i = 0; i < bigImgEls.length; i++) {
     if(i == currentImg) {
-      bigImgEls[i].style.display = 'block';
+      bigImgEls[i].style.cssText = 'display: block;'
     } else {
-      bigImgEls[i].style.display = 'none';
+      bigImgEls[i].style.cssText = 'display: none;'
     }
   }
 }
-
-showImg();
 
 goRightBtnEl.addEventListener('click', goRight);
 goRightBtnEl.addEventListener('click', showImg);
 goLeftBtnEl.addEventListener('click', goLeft);
 goLeftBtnEl.addEventListener('click', showImg);
+
+
+
+//Mobile Image Slider
+const goLeftLibBtnEl = document.querySelector('.product__switch-btn--left');
+const goRightLibBtnEl = document.querySelector('.product__switch-btn--right');
+const bigLibImgEls = document.querySelectorAll('.product__preview-big-img');
+
+goRightLibBtnEl.addEventListener('click', goRight);
+goRightLibBtnEl.addEventListener('click', showImg);
+goLeftLibBtnEl.addEventListener('click', goLeft);
+goLeftLibBtnEl.addEventListener('click', showImg);
+
 
 // Mobile Navigation
 
