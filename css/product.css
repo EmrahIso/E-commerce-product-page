@@ -139,3 +139,16 @@
 .product__preview-big-img:not(:first-child) {
     display: none;
 }
+
+.product__switch-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--color-white);
+}
