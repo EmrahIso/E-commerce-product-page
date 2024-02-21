@@ -34,10 +34,19 @@ const addToCartBtnCountEl = document.querySelector('.header__user-cart-button-co
 const addToCartBtnEl = document.querySelector('.product__info-cart-add-button');
 
 function addItem() {
-  addToCartBtnCountEl.textContent = quantityNumberValue
-  addToCartBtnCountEl.style.cssText = 'padding: 0.15rem 0.5rem;'
-  itemBoxEl.classList.add('header__user-basket-box-o')
-  emptyCartHeadingEl.style.cssText = 'opacity: 0; pointer-events: none;'
+  console.log(quantityNumberValue)
+  if(quantityNumberValue == 0) {
+    addToCartBtnCountEl.textContent = 0
+    addToCartBtnCountEl.style.cssText = 'padding: 0.15rem 0.5rem;'
+    itemBoxEl.classList.remove('header__user-basket-box-o')
+    emptyCartHeadingEl.style.cssText = 'opacity: 1; pointer-events: all;'
+    return
+  } else {
+    addToCartBtnCountEl.textContent = quantityNumberValue
+    addToCartBtnCountEl.style.cssText = 'padding: 0.15rem 0.5rem;'
+    itemBoxEl.classList.add('header__user-basket-box-o')
+    emptyCartHeadingEl.style.cssText = 'opacity: 0; pointer-events: none;'
+  }
 }
 
 addToCartBtnEl.addEventListener('click', addItem);
@@ -47,6 +56,7 @@ const removeBtnEl = document.querySelector('.header__user-basket-box-info-item-d
 function removeCartItems() {
   itemBoxEl.classList.remove('header__user-basket-box-o')
   emptyCartHeadingEl.style.cssText = 'opacity: 1; pointer-events: all;'
+  addToCartBtnCountEl.textContent = 0
 }
 
 removeBtnEl.addEventListener('click', removeCartItems);
@@ -75,14 +85,18 @@ const cartPriceActualEl = document.querySelector('.header__user-basket-info-mini
 
 
 function countCheckout() {
-  let actualPrice = priceOfProduct * quantityNumberValue;
-  actualPrice = actualPrice.toFixed(2);
-  cartPriceCountEl.innerHTML = `${quantityNumberValue}`;
-  cartPriceActualEl.innerHTML = `$${actualPrice}`;
-  cartPriceActualEl.style.cssText = 'font-weight: 700; color: var(--color-very-dark-blue);'
-
-  quantityNumberValue = 0;
-  quantityNumberEl.textContent = '0' ;
+  if(quantityNumberValue == 0) {
+    return
+  } else {
+    let actualPrice = priceOfProduct * quantityNumberValue;
+    actualPrice = actualPrice.toFixed(2);
+    cartPriceCountEl.innerHTML = `${quantityNumberValue}`;
+    cartPriceActualEl.innerHTML = `$${actualPrice}`;
+    cartPriceActualEl.style.cssText = 'font-weight: 700; color: var(--color-very-dark-blue);'
+    quantityNumberValue = 0;
+    quantityNumberEl.textContent = '0';
+  }
+  
 }
 
 addToCartBtnEl.addEventListener('click', countCheckout);
@@ -156,10 +170,20 @@ const goLeftLibBtnEl = document.querySelector('.product__switch-btn--left');
 const goRightLibBtnEl = document.querySelector('.product__switch-btn--right');
 const bigLibImgEls = document.querySelectorAll('.product__preview-big-img');
 
+function showMobileImg() {
+  for(let i = 0; i < bigLibImgEls.length; i++) {
+    if(i == currentImg) {
+      bigLibImgEls[i].style.cssText = 'display: block;'
+    } else {
+      bigLibImgEls[i].style.cssText = 'display: none;'
+    }
+  }
+}
+
 goRightLibBtnEl.addEventListener('click', goRight);
-goRightLibBtnEl.addEventListener('click', showImg);
+goRightLibBtnEl.addEventListener('click', showMobileImg);
 goLeftLibBtnEl.addEventListener('click', goLeft);
-goLeftLibBtnEl.addEventListener('click', showImg);
+goLeftLibBtnEl.addEventListener('click', showMobileImg);
 
 
 // Mobile Navigation
