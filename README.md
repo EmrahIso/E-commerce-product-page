@@ -11,9 +11,11 @@ E-commerce product page.
 ## Overview
 
 ### Screenshot
+![](./design/desktop-design.jpg)
+![](./design/mobile-design.jpg)
 
 ### Links
-
+  - Live preview - [E-com-web] (https://e-commerce-product-page-fmentor.netlify.app/)
 
 ## Built with 
   - Semantic HTML5
