@@ -86,12 +86,12 @@
 }
 
 .lightbox .popup__switch-btn--left {
-   transform: translateX(-40%);
+   transform: translateX(-40%) translateY(-50%);
    left: 0;
 }
 
 .lightbox .popup__switch-btn--right {
-    transform: translateX(40%);
+    transform: translateX(40%) translateY(-50%);
     right: 0;
 }
 
