@@ -34,7 +34,6 @@ const addToCartBtnCountEl = document.querySelector('.header__user-cart-button-co
 const addToCartBtnEl = document.querySelector('.product__info-cart-add-button');
 
 function addItem() {
-  console.log(quantityNumberValue)
   if(quantityNumberValue == 0) {
     addToCartBtnCountEl.textContent = 0
     addToCartBtnCountEl.style.cssText = 'padding: 0.15rem 0.5rem;'
@@ -164,7 +163,6 @@ goLeftBtnEl.addEventListener('click', goLeft);
 goLeftBtnEl.addEventListener('click', showImg);
 
 
-
 //Mobile Image Slider
 const goLeftLibBtnEl = document.querySelector('.product__switch-btn--left');
 const goRightLibBtnEl = document.querySelector('.product__switch-btn--right');
@@ -185,6 +183,14 @@ goRightLibBtnEl.addEventListener('click', showMobileImg);
 goLeftLibBtnEl.addEventListener('click', goLeft);
 goLeftLibBtnEl.addEventListener('click', showMobileImg);
 
+window.addEventListener('resize', e => {
+  currentImg == 0;
+  for(let i = 0; i < bigImgEls.length; i++) {
+    bigImgEls[i].style.display = 'none';
+  }
+  bigImgEls[0].style.display = 'block';
+  rootEl.classList.remove('m-c');
+})
 
 // Mobile Navigation
 
@@ -193,5 +199,14 @@ const menuBtnEl = document.querySelector('.nav__open-btn')
 menuBtnEl.addEventListener('click', menuOpen)
 
 function menuOpen() {
-  rootEl.classList.toggle('m-c')
+  rootEl.classList.toggle('m-c');
 }
+
+function goToSection(e) {
+  if(e.target.className == 'nav__list-item-link') {
+    rootEl.classList.remove('m-c');
+  }
+}
+
+const navListEl = document.querySelector('.nav__list');
+navListEl.addEventListener('click', goToSection)

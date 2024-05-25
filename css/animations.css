@@ -1,0 +1,15 @@
+@keyframes menuDarkOverlayAnimation {
+    0% {
+        left: -100%;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        left: 30vw;
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -93,21 +93,13 @@
 
     .nav {
         flex-direction: row-reverse;
-        gap: 3rem;
+        gap: 5rem;
     }
 
     .nav__open-btn {
         opacity: 1;
         pointer-events: all;
         visibility: visible;
-    }
-
-    .nav__list {
-        opacity: 0;
-        pointer-events: none;
-        visibility: hidden;
-        position: absolute;
-        z-index: 9998;
     }
 
     .header__box {
@@ -149,6 +141,23 @@
         visibility: hidden;
     }
 
+    .nav__list {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        position: absolute;
+        z-index: 9998;
+        top: 0;
+        left: -30vw;
+        background-color: #fff;
+        z-index: 9998;
+        width: 30vw;
+        height: 100vh;
+        flex-direction: column;
+        padding: 15rem 2.5rem 0 2.5rem;
+        transition: all .2s ease-in;
+    }
+
     .m-c .nav__list {
         opacity: 1; 
         pointer-events: all;
@@ -156,12 +165,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #fff;
-        z-index: 9998;
-        width: 66vw;
-        height: 100vh;
-        flex-direction: column;
-        padding: 15rem 2.5rem 0 2.5rem;
     }
 
     .nav__list-item {
@@ -238,5 +241,10 @@
 
     .product__info-cart-add-button {
         justify-content: center;
+    }
+
+    .nav__list {
+        left: -50vw;
+        width: 50vw;
     }
 }

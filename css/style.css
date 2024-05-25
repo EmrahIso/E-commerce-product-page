@@ -58,16 +58,22 @@ body {
 
 .logo-img {
     cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu-dark {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 70vw;
+    z-index: 999;
+    left: -100%;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .m-c body .menu-dark {
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9991;
-    height: 100vh;
-    width:  100vw;
-    right: 0;
-    top: 0;
-    width: 34vw;
+    animation: menuDarkOverlayAnimation .5s ease-in 1 normal forwards;
 }
